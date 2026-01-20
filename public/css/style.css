@@ -1,0 +1,346 @@
+/* ========================================
+   GENERAL STYLES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ========================================
+   CONTAINER & LAYOUT
+   ======================================== */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+/* ========================================
+   HEADER & TITLES
+   ======================================== */
+
+h2 {
+    color: #667eea;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #764ba2;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   BUTTONS & LINKS
+   ======================================== */
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+button, .btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: #333;
+}
+
+.btn-danger:hover {
+    box-shadow: 0 5px 20px rgba(250, 112, 154, 0.4);
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="hidden"],
+textarea,
+select {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: #f8f9ff;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+/* ========================================
+   LISTS
+   ======================================== */
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    background: #f8f9ff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background: #f0f2ff;
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+}
+
+ul li strong {
+    color: #764ba2;
+    font-size: 1.1em;
+}
+
+ul li ul {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+ul li ul li {
+    background: white;
+    border-left-color: #764ba2;
+    font-size: 0.95em;
+}
+
+ul li ul li:hover {
+    background: #fff5f9;
+}
+
+/* ========================================
+   ACTION LINKS
+   ======================================== */
+
+.action-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.action-links a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #f0f2ff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid #667eea;
+}
+
+.action-links a:hover {
+    background: #667eea;
+    color: white;
+    border-color: #764ba2;
+}
+
+.action-links a.delete {
+    background: #ffe0e6;
+    border-color: #f5576c;
+    color: #f5576c;
+}
+
+.action-links a.delete:hover {
+    background: #f5576c;
+    color: white;
+}
+
+/* ========================================
+   HORIZONTAL RULE
+   ======================================== */
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin: 20px 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    select {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    button, .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    ul li {
+        padding: 12px;
+    }
+
+    .action-links {
+        flex-direction: column;
+    }
+
+    .action-links a {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   SUCCESS & ERROR MESSAGES
+   ======================================== */
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #28a745;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5576c;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border-color: #667eea;
+}
+
+/* ========================================
+   TABLE STYLES (if needed in future)
+   ======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:hover {
+    background: #f8f9ff;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}

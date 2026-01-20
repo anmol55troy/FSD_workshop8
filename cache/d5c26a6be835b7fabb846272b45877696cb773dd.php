@@ -1,6 +1,6 @@
-@extends('layout')
-@section('title','Create Employee')
-@section('content')
+
+<?php $__env->startSection('title','Create Employee'); ?>
+<?php $__env->startSection('content'); ?>
 
 <h3>Add New Employee</h3>
 
@@ -18,4 +18,5 @@
     <a href="index.php" style="color: #999;">← Back to Employee List</a>
 </p>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\week8FSD\app\views/employee/create.blade.php ENDPATH**/ ?>
